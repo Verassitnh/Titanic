@@ -13,7 +13,3 @@ def predict(pclass ,age, sex, sibSp, parCh):
 @app.route("/api/predict/<int:pclass>/<int:age>/<int:sex>/<int:sibsp>/<int:parch>")
 def hello_world(pclass, age, sex, sibsp, parch):
     return "You will die" if predict(pclass, age, sex, sibsp, parch)[0] == 0 else "You will live"
-
-
-if __name__ == "__main__":
-    app.run(debug=False, host="0.0.0.0", port=80)
